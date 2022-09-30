@@ -1,0 +1,15 @@
+type Label {
+    id: Long
+    name: String
+}
+
+input label_where {
+    id: long_op
+    name: string_op
+}
+
+type Query {
+    findById(id: Long): Label
+    queryLabels(limit: Int, offset: Int, name: String): [Label]
+    t_label(limit: Int, offset: Int, where: label_where): [Label]
+}

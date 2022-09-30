@@ -1,0 +1,20 @@
+<!DOCTYPE generatorConfiguration PUBLIC
+        "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <context id="dsql" targetRuntime="MyBatis3DynamicSql">
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://101.35.143.169:5432/demo"
+        userId="postgres" password="Yanyuxi19990110"/>
+
+        <javaModelGenerator targetPackage="com.diantongren.model" targetProject="src/main/java"/>
+
+        <javaClientGenerator targetPackage="com.diantongren.mapper" targetProject="src/main/java">
+            <property name="rootInterface" value="org.mybatis.dynamic.sql.util.mybatis3.CommonSelectMapper"/>
+        </javaClientGenerator>
+
+        <table tableName="t_label" domainObjectName="LabelEntity">
+            <generatedKey column="id" sqlStatement="JDBC" identity="true" type="post"/>
+        </table>
+    </context>
+</generatorConfiguration>

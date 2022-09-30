@@ -1,0 +1,23 @@
+"A 64-bit signed integer"
+scalar Long
+
+schema {
+    query: Query
+}
+
+input long_op{
+    _eq: Long
+    _in: [Long!]
+    _is_null: Boolean
+    _gt: Long
+    _gte: Long
+    _lt: Long
+    _lte: Long
+}
+
+input string_op {
+    _eq: String
+    _like: String
+    _ilike: String
+    _is_null: Boolean
+}
